@@ -127,14 +127,14 @@ This is the meaning of the attributes and element values in the sample above:
 
 * **intructions**: The instructions for the project.  If there are instructions
   defined, the **Project Instructions** tab will be shown when the Xbench project
-  loads.  The instructions can have rich formatting it its value is in RTF (Rich
+  loads.  The instructions can have rich formatting if its value is in RTF (Rich
   Text Format).
 
 ```xml
 <memoryfile></memoryfile>
 ```
 
-* **memoryfile**: TBD.
+* **memoryfile**: This value is not currently used by Xbench.
 
 ```xml
 <checklistgroup>
@@ -164,37 +164,37 @@ This is the meaning of the attributes and element values in the sample above:
   of time, Xbench only had a search function, which was used to search glossaries).
   * **type**: The type number of the glossary.  Possible type numbers are:
     * **-1**: Auto-detect
-    * **1**: Tab-delimited text file
-    * **2**: Trados exported TM (.txt format)
-    * **3**: Multiterm 5 exported file (.txt format)
-    * **4**: IBM TM/OpenTM2 glossary (TBD format)
-    * **5**: Microsoft glossary (.csv format)
-    * **6**: TMX
-    * **7**: Wordfast TM (.txt format)
-    * **8**: Trados uncleaned file (.doc or .rtf format)
-    * **9**: Trados TagEditor file (.ttx format)
-    * **10**: SDLX file (.itd format)
-    * **11**: Wordfast file (TDB format)
-    * **12**: Exported TM/2 folder (TBD format)
-    * **13**: Oracle XLIFF
-    * **14**: TBX (also Martif?)
-    * **15**: Multiterm
-    * **16**: MacOSXGLossary (TDB format)
-    * **17**: IdiomWsPrj
-    * **18**: IdiomWsMem
-    * **19**: SDLX TM file (mdb format)
-    * **20**: Logoport file (rtf format)
-    * **21**: IBM TM/OpenTM2 exported TM (.exp format)
-    * **22**: PO file
-    * **23**: Wordfast Pro file (txml format)
-    * **24**: SDL Studio file (sdlxliff format)
-    * **25**: QtLinguist file (.ts format)
-    * **26**: MemoQ file (mqxlz format)
-    * **27**: SDL Studio TM (sdltm format)
-    * **28**: TIPP file (tpp format)
-    * **29**: Passolo glossary file (.glo format)
+    * **1**: Tab-delimited text file (.txt, .tsv, .utx extensions)
+    * **2**: Trados exported TM (.txt extension)
+    * **3**: Multiterm 5 exported file (.txt extension)
+    * **4**: IBM TM/OpenTM2 glossary (.sgm extension)
+    * **5**: Microsoft glossary (.csv extension)
+    * **6**: TMX (.tmx extension)
+    * **7**: Wordfast TM (.txt extension)
+    * **8**: Trados uncleaned file (.doc or .rtf extensions)
+    * **9**: Trados TagEditor file (.ttx extension)
+    * **10**: SDLX file (.itd extension)
+    * **11**: Wordfast file (.txt extension)
+    * **12**: Exported TM/2 folder (.fxp extension)
+    * **13**: XLIFF based file (.xlf, .xlif, .xliff, .mxliff, .xlz, .mqxlz, .mqout, .mqback, .xlf.zip extensions)
+    * **14**: TBX/Martif file (.tbx, .mtf, .xml)
+    * **15**: Multiterm glossary (.xml, .sdltb, .mdb extensions)
+    * **16**: MacOSXGLossary (.ad or .lg extensions)
+    * **17**: Deja Vu X/Idiom file (.wsprj, .dvpng, .dvprj, .dvsat extensions)
+    * **18**: Deja Vu X/Idiom TM (.wstm, .dvmdb, .dvapr)
+    * **19**: SDLX TM file (.mdb extension)
+    * **20**: Logoport file (.rtf extension)
+    * **21**: IBM TM/OpenTM2 exported TM (.exp extension)
+    * **22**: PO file (.po extension)
+    * **23**: Wordfast Pro file (.txml, .txlf extensions)
+    * **24**: SDL Studio file (.sdlxliff, .sdlproj extensions)
+    * **25**: QtLinguist file (.ts extension)
+    * **26**: MemoQ file (.mqxliff, .mqxlz, .mqback, .mqout extensions)
+    * **27**: SDL Studio TM (.sdltm extension)
+    * **28**: TIPP file (.tpp extension)
+    * **29**: Passolo glossary file (.glo extension)
     * **30**: Transifex
-    * **31**: IdiomWsTd
+    * **31**: Deja Vu X/Idiom termbase (.wstd, .dvtdb)
     * **32**: Matecat job
     * **33**: Google Translator Toolkit (GTT) file (.xbgtt extension)
     * **50**: Transit XV/NXT directory
@@ -204,11 +204,11 @@ This is the meaning of the attributes and element values in the sample above:
     * **54**: Remote Xbench Server
     * **55**: Directory of Logoport RTF files
     * **56**: Directory of Tab-delimited text files
-    * **57**: Directory of Trados exported TMs (txt format)
+    * **57**: Directory of Trados exported TM
     * **58**: Directory of IBM TM/OpenTM2 glossary files
-    * **59**: Directory of Microsoft glossary files (csv format)
+    * **59**: Directory of Microsoft glossary files
     * **60**: Directory of TMX files
-    * **61**: Directory of Wordfast TMs (txt format)
+    * **61**: Directory of Wordfast TMs
     * **62**: Directory of Wordfast files
     * **63**: Directory of exported TM/2 folders
     * **64**: Directory of Oracle XLIFF files
@@ -217,7 +217,7 @@ This is the meaning of the attributes and element values in the sample above:
     * **67**: Directory of PO files
     * **68**: Directory of Wordfast Pro tmxl files
     * **69**: Directory of SDL Studio sdlxliff files
-    * **70**: Directory of Qt Linguist .ts files
+    * **70**: Directory of Qt Linguist files
     * **71**: Directory of Trados glossaries
     * **72**: Directory of TBX files
     * **73**: Directory of Multiterm files
@@ -225,7 +225,7 @@ This is the meaning of the attributes and element values in the sample above:
     * **75**: Directory of IdiomWsMem
     * **76**: Directory of SDLX TMs
     * **77**: Directory of memoQ files
-    * **78**: Directory of SDL TMs (.sdltm extension)
+    * **78**: Directory of SDL TMs
     * **79**: Directory of TIPP files
     * **80**: Directory of Passolo glossary files
     * **81**: Directory of IdiomWsTd
@@ -258,13 +258,22 @@ to the location of the .xbp file.
 ```xml  
 <process>0</process>
 ```
-* **process**: TBD
+* **process**: Determines the mnemonic processing that must be applied to segments. Possible values are:
+  * 0: None
+  * 1: Remove Shortcuts (&)
+  * 2: Remove Shortcuts (~)
+  * 3: Remove Shortcuts (_)
+  * 4: Remove Shortcuts (_&)
+  * 5: Remove Shortcuts (~&)
+  * 6: Remove Shortcuts (_~)
+  * 7: Remove Shortcuts (^)
+  * 8: Remove Shortcuts (&amp;)
 
 ```xml
 <static>0</static>
 ```
 
-* **static**: TDB
+* **static**: A value of 1 means that the glossary will not be reloaded with Refresh (F5)
 ```xml
 <srclang>0</srclang>
 ```
