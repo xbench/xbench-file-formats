@@ -20,7 +20,7 @@ There are three file formats relevant for ApSIC Xbench 3.0:
 The ApSIC Xbench project file is used to store the settings for the files or
 directories that must be loaded by Xbench.
 
-The file format is a UTF-8 XML file and you can cone simply by choosing 
+The file format is a UTF-8 XML file and you can create one simply by choosing 
 **File**->**Save** in ApSIC Xbench.
 
 Please remember that XML element and attribute names are case-sensitive.
@@ -343,10 +343,14 @@ to the location of the .xbp file.
   by autorefreshinterval.  The file will be reloaded only if it has changed.
 
 Certain file types also have *special settings*.  These special settings are stored
-in the xxxx element.  The file types with special settings are:
+in the `options` element.  For example, for a Matecat job type, the `options` element 
+under the `glossary` will look like this:
 
-* TBD
-* TBD
+```xml
+<options>
+    <url>https://www.matecat.com/translate/Test.docx/en-US-es-ES/1234-c0315efe45b1#249231410</url>
+</options>
+```
             
 ## Xbench QA settings at load time<a name="heading-xml"></a>
 
