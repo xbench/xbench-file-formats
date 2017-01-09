@@ -174,9 +174,9 @@ This is the meaning of the attributes and element values in the sample above:
     * **8**: Trados uncleaned file (.doc or .rtf extensions)
     * **9**: Trados TagEditor file (.ttx extension)
     * **10**: SDLX file (.itd extension)
-    * **11**: Wordfast file (.txt extension)
+    * **11**: Wordfast glossary (.txt extension)
     * **12**: Exported TM/2 folder (.fxp extension)
-    * **13**: XLIFF based file (.xlf, .xlif, .xliff, .mxliff, .xlz, .mqxlz, .mqout, .mqback, .xlf.zip extensions)
+    * **13**: XLIFF-based file (.xlf, .xlif, .xliff, .mxliff, .xlz, .mqxlz, .mqout, .mqback, .xlf.zip extensions)
     * **14**: TBX/Martif file (.tbx, .mtf, .xml)
     * **15**: Multiterm glossary (.xml, .sdltb, .mdb extensions)
     * **16**: MacOSXGLossary (.ad or .lg extensions)
@@ -192,7 +192,7 @@ This is the meaning of the attributes and element values in the sample above:
     * **26**: MemoQ file (.mqxliff, .mqxlz, .mqback, .mqout extensions)
     * **27**: SDL Studio TM (.sdltm extension)
     * **28**: TIPP file (.tpp extension)
-    * **29**: Passolo glossary file (.glo extension)
+    * **29**: Passolo glossary (.glo extension)
     * **30**: Transifex
     * **31**: Deja Vu X/Idiom termbase (.wstd, .dvtdb)
     * **32**: Matecat job
@@ -204,14 +204,14 @@ This is the meaning of the attributes and element values in the sample above:
     * **54**: Remote Xbench Server
     * **55**: Directory of Logoport RTF files
     * **56**: Directory of Tab-delimited text files
-    * **57**: Directory of Trados exported TM
+    * **57**: Directory of Trados exported TMs
     * **58**: Directory of IBM TM/OpenTM2 glossary files
     * **59**: Directory of Microsoft glossary files
     * **60**: Directory of TMX files
     * **61**: Directory of Wordfast TMs
     * **62**: Directory of Wordfast files
     * **63**: Directory of exported TM/2 folders
-    * **64**: Directory of Oracle XLIFF files
+    * **64**: Directory of XLIFF-based files
     * **65**: Directory of Mac OSX glossaries
     * **66**: Directory of exported IBM TM/OpenTM2 TMs
     * **67**: Directory of PO files
@@ -221,15 +221,15 @@ This is the meaning of the attributes and element values in the sample above:
     * **71**: Directory of Trados glossaries
     * **72**: Directory of TBX files
     * **73**: Directory of Multiterm files
-    * **74**: Directory of IdiomWsPrj
-    * **75**: Directory of IdiomWsMem
+    * **74**: Directory of Deja Vu X/Idiom files
+    * **75**: Directory of Deja Vu X/Idiom TMs
     * **76**: Directory of SDLX TMs
     * **77**: Directory of memoQ files
     * **78**: Directory of SDL TMs
     * **79**: Directory of TIPP files
-    * **80**: Directory of Passolo glossary files
-    * **81**: Directory of IdiomWsTd
-    * **82**: Directory of GTT files (.xbgtt extension)
+    * **80**: Directory of Passolo glossaries
+    * **81**: Directory of Deja Vu X/Idiom termbases
+    * **82**: Directory of GTT files
     * **99**: IBM TM/OpenTM2 installed folder
 
 ```xml
