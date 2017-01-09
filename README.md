@@ -345,7 +345,7 @@ You can launch Xbench with project file and a preselected set of QA settings usi
 the `-o` switch.
 
 ```
-c:> xbench.exe -o=qa-settings-file.xml
+c:\> xbench.exe -o=qa-settings-file.xml
 ```
 
 The XML file has the following structure:
