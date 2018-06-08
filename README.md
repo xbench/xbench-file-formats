@@ -1,6 +1,6 @@
 # ApSIC Xbench 3.0 file formats
 
-There are three file formats relevant for ApSIC Xbench 3.0:
+There are four file formats relevant for ApSIC Xbench 3.0:
 
 * [**ApSIC Xbench Project file**](#heading-xbp) (.xbp extension).  This file defines the
   bilingual files added to the Xbench project, their types, their attributes.
@@ -14,6 +14,8 @@ There are three file formats relevant for ApSIC Xbench 3.0:
 
 * [**Xbench checklist file**](#heading-xbckl) (.xbckl extension).  This file defines the checklist 
   entries and the included or inherited checklists.
+
+* [**Xbench package file**](#heading-xbpkg) (.xbpkg extension).  This file is a container of files.
 
 ## ApSIC Xbench Project File (.xbp extension)<a name="heading-xbp"></a>
 
@@ -527,3 +529,26 @@ Xbench Checklist Manager navigation's tree.
 
 * **description**: A detailed description of the checklist item.
 * **timestamp**: The date and time the checklist item was last updated.
+
+## ApSIC Xbench Package File (.xbpkg extension)<a name="heading-xbpkg"></a>
+
+The Xbench package file is a zip file with the .xbpkg extension and has the following contents:
+* An [Xbench Project file](#heading-xbp) named **project.xbp** (optional) in the root directory
+* An [Xbench QA Settings file](#heading-xml) named **qasettings.xml** (optional) in the root directory.
+  This file must specify **project.xbp** in the **\<project>** element.
+* Any files pertaining to the project (bilingual files, checklists, etc.)
+
+When the user double-clicks the *.xbpkg* file,  Xbench extracts the files in the package
+to a directory under the temp directory and then does the following:
+
+* If there is no **project.xbp** file, Xbench runs command **Run QA in Xbench**
+  on the upacked directory (this is exactly the same as if the user selects the folder in
+  Windows Explorer, right-clicks and then chooses **Run QA in Xbench**.
+* If there is a **project.xbp** file but no **qasettings.xml** file, Xbench will
+  load the **project.xbp** file, who in its turn will load any files to QA or
+  checklists.
+* If there is a **qasettings.xml** file, Xbench will be run with the **-o=qasettings.xml**   command-line switch.
+
+Please note that references to files in the **project.xbp** and **qasettings.xml** files
+must be done using relative paths because the exact name of the directory where
+the package will be unpacked cannot be known beforehand.
